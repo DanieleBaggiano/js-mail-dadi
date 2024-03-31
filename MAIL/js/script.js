@@ -1,23 +1,20 @@
 const userBtn = document.querySelector(".emailbtn");
-console.log(userBtn);
+console.log(userBtn, typeof userBtn);
 
 userBtn.addEventListener("click", function () {
+
     const mails = ["pippo@gmail.com", "pluto@gmail.com", "paperino@gmail.com", "topolino@gmail.com", "danielebaggiano@gmail.com"];
-    console.log(mails);
+    console.log(mails, typeof mails);
+    const mailslowercase = mails.map(mails => mails.toLowerCase());
 
-    const userEmail = document.getElementById("email");
-    console.log(userEmail);
+    const userEmail = document.getElementById("email").value;
+    const userEmaillowercase = userEmail.toLowerCase();
 
-    let result = false;
-
-    for (let i = 0; i < mails.length; i++) {
-        console.log(mails[i]);
-        if (userEmail == mails) {
-            result = true;
-            // validEmail = "E-mail valida!!";
-            console.log(validEmail);
-        } else if (userEmail != mails) {
-            // validEmail = "E-mail non valida!!";
-        }
+    if (mailslowercase.includes(userEmail)) {
+        console.log("E-mail valida!!");
+        
+    } else {
+ 
+        console.log("E-mail non valida!!");
     }
 })
