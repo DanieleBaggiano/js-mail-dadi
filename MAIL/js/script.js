@@ -15,7 +15,9 @@ userBtn.addEventListener("click", function () {
 
         console.log("E-mail valida!!");
 
-        window.open("file:///C:/Users/alice/OneDrive/Desktop/Lezioni%20HTML/js-mail-dadi/js-mail-dadi/DADI/dadi.html", "_self")
+        const pathRelativo = "../DADI/dadi.html";
+
+        window.open(pathRelativo, "_blank");
         
     } else {
  
@@ -24,3 +26,4 @@ userBtn.addEventListener("click", function () {
         alert("E-mail non valida!!");
     }
 })
+
